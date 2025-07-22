@@ -22,9 +22,11 @@ export default function useFetchData() {
     controllerRef.current = newController;
 
     setError("");
-    const URL = `https://newsapi.org/v2/top-headlines?q=${inputQuery}&category=${category}&page=${page}&pageSize=${PAGE_SIZE}&country=us&apiKey=${
-      import.meta.env.VITE_NEWS_FEED_API_KEY
-    }`;
+    // const URL = `https://newsapi.org/v2/top-headlines?q=${inputQuery}&category=${category}&page=${page}&pageSize=${PAGE_SIZE}&country=us&apiKey=${
+    //   import.meta.env.VITE_NEWS_FEED_API_KEY
+    // }`;
+    const URL = `/api/news?query=${inputQuery}&category=${category}&page=${page}`;
+
     try {
       const response = await fetch(URL, { signal: newController.signal });
       const data = await response.json();

@@ -1,4 +1,4 @@
-import { Container, Button, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import NewsFeed from "./components/NewsFeed";
 import NewsHeader from "./components/NewsHeader";
 import AppContextProvider, { AppContext } from "./AppContext";
